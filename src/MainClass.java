@@ -21,8 +21,10 @@ public class MainClass {
         Calc.sum(var_1, var_3);
         Calc.negate(var_1, var_3);
         Calc.multiply(var_1, var_3);
-
-
+        Calc.division(var_2, var_1);
+        Calc.division((double) var_2, (double) var_1);
+        WorkWithArray.fillingOFDiagonal();
+        WorkWithArray.fillingOFDiagonalright();
 
 
     }
