@@ -23,8 +23,9 @@ public class MainClass {
         Calc.multiply(var_1, var_3);
         Calc.division(var_2, var_1);
         Calc.division((double) var_2, (double) var_1);
-        WorkWithArray.fillingOFDiagonal();
-        WorkWithArray.fillingOFDiagonalright();
+        int[][] arrayArray = new int[3][3];
+        WorkWithArray.fillingOFDiagonal(arrayArray);
+        WorkWithArray.fillingOFDiagonalright(arrayArray);
 
 
     }

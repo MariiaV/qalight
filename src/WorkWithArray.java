@@ -1,9 +1,9 @@
 public class WorkWithArray {
 
-    public static void fillingOFDiagonal() {
+    public static void fillingOFDiagonal(int [][] arrayArray) {
 
 
-        int[][] arrayArray = new int[3][3];
+
         for (int i = 0; i < arrayArray.length; i++) {
             for (int j = 0; j < arrayArray[i].length; j++) {
                 if (i == 0 && j == 0) {
@@ -23,10 +23,10 @@ public class WorkWithArray {
         }
     }
 
-    public static void fillingOFDiagonalright() {
+    public static void fillingOFDiagonalright(int [][] arrayArray) {
 
 
-        int[][] arrayArray = new int[3][3];
+
         for (int i = 0; i < arrayArray.length; i++) {
             for (int j = 0; j < arrayArray[i].length; j++) {
                 if (i == 0 && j == 2) {
