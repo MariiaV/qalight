@@ -1,5 +1,4 @@
-import libs.Calc;
-import libs.WorkWithList;
+import libs.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,6 +33,7 @@ public class MainClass {
 
 
 
+
         // WorkWithArray.filld (arrayArray, 1);
         int[][] arrayArray1 = {{0, 0, 0}, {0, 0, 0}, {0, 0, 0}};
 
@@ -59,6 +59,25 @@ public class MainClass {
         workWithList.addValueToListList(1, "test13", ourList);
 
         workWithList.printListList(ourList);
+
+        Dollar dollar = new Dollar(25, 1.15);
+        System.out.println(dollar.getKursNBU());
+        dollar.setKursNBU(30);
+        System.out.println(dollar.getKursNBU());
+        dollar.setKursNBU(15);
+        dollar.setKursNBU(10);
+        System.out.println(dollar.getKursNBU());
+
+        Bitcoin bitcoin = new Bitcoin(1000,200);
+        System.out.println(bitcoin.getKursNBU());
+        bitcoin.convertCurrencyToGrn(20);
+
+        UZdollar uZdollar = new UZdollar(40,1.8);
+        System.out.println(uZdollar.getKursNBU());
+        uZdollar.convertGrnToCurrency(10000);
+
+        dollar.convertGrnToCurrency(1000);
+        dollar.convertCurrencyToGrn(100);
 
         System.out.println("-- end --");
 
