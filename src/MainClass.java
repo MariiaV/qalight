@@ -1,4 +1,8 @@
 import libs.Calc;
+import libs.WorkWithList;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainClass {
 
@@ -38,7 +42,23 @@ public class MainClass {
         int[][] emptyArray = new int[0][0];
         int[][] rezMatrix2 = workWithArray.fillingOFDiagonal(emptyArray, 6);
 
+        WorkWithList workWithList = new WorkWithList();
+        List<List<String>> ourList = new ArrayList<>();
+        List<String> ourList2 = new ArrayList<>();
 
+        workWithList.addListToList(ourList, ourList2);
+        workWithList.addValueToListList(0, "test01", ourList);
+
+        workWithList.addListToList(ourList, ourList2);
+        workWithList.addValueToListList(1, "test11", ourList);
+        workWithList.addValueToListList(1, "test12", ourList);
+        workWithList.addValueToListList(0, "test02", ourList);
+
+        workWithList.addListToList(ourList, ourList2);
+        workWithList.addValueToListList(2, "test21", ourList);
+        workWithList.addValueToListList(1, "test13", ourList);
+
+        workWithList.printListList(ourList);
 
         System.out.println("-- end --");
 
