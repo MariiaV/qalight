@@ -2,7 +2,6 @@ import org.apache.log4j.Logger;
 
 public class WorkWithArray {
     Logger logger = Logger.getLogger(getClass());
-    static Logger loggerStatic = Logger.getLogger("WorkWithArray");
 
     public int [][] fillingOFDiagonal(int[][] arrayArray, int value) {
         try {
@@ -26,14 +25,14 @@ public class WorkWithArray {
                         printArray(arrayArray);
                     }
                 } else {
-                    logger.info("length <= 0");
+                    System.out.println("length <= 0");
 
                 }
             } else {
-                logger.info(" Lenght should be the same ");
+                System.out.println(" Lenght should be the same ");
             }
         } catch (Exception e) {
-            logger.error("Error");
+            System.out.println("Error");
         }
         return arrayArray;
     }
@@ -60,32 +59,32 @@ public class WorkWithArray {
                         printArray(arrayArray);
                     }
                 } else {
-                    logger.info("length <= 0");
+                    System.out.println("length <= 0");
 
                 }
             } else {
-                logger.info(" Lenght should be the same ");
+                System.out.println(" Lenght should be the same ");
             }
         } catch (Exception e) {
-            logger.error("Error");
+            System.out.println("Error");
         }
     }
 
     private void printArray (int [][] ourArray){
         for (int i = 0; i < ourArray.length ; i++) {
             for (int j = 0; j < ourArray[0].length ; j++) {
-                logger.info(ourArray[i][j]);
+                System.out.print(ourArray[i][j]);
             }
-            logger.info("");
+            System.out.println("");
         }
     }
 
     private void printArray(String[][] ourArray) {
         for (int i = 0; i < ourArray.length; i++) {
             for (int j = 0; j < ourArray[0].length; j++) {
-                logger.info("[i][j]");
+                System.out.print(ourArray[i][j]);
             }
-            logger.info("");
+            System.out.println("");
         }
     }
 
@@ -106,9 +105,9 @@ public class WorkWithArray {
                 }
 
 
-                loggerStatic.info(" " + arrayArray[i][j]);
+                System.out.print(" " + arrayArray[i][j]);
             }
-            loggerStatic.info("");
+            System.out.println("");
         }
 
 
