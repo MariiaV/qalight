@@ -1,4 +1,5 @@
 import libs.*;
+import org.apache.log4j.Logger;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,13 +7,18 @@ import java.util.List;
 public class MainClass {
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger("MainClass");
 
-        System.out.println("Hello!");
-        System.out.println("Hello!");
+        logger.info("Test");
+        logger.debug("TestDebug");
+        logger.error("TestError");
+
+        logger.info("Hello!");
+        logger.info("Hello!");
         int var_1;
         var_1 = 5;
         int var_2 = 10;
-        System.out.println(var_1 + var_2);
+        logger.info(var_1 + var_2);
 //        int rez = var_1 + var_2;
 //        System.out.println("Rez =" + rez);
         Calc.sum(var_1, var_2);
@@ -61,12 +67,12 @@ public class MainClass {
         workWithList.printListList(ourList);
 
         Dollar dollar = new Dollar(25, 1.15);
-        System.out.println(dollar.getKursNBU());
+        logger.info(dollar.getKursNBU());
         dollar.setKursNBU(30);
-        System.out.println(dollar.getKursNBU());
+        logger.info(dollar.getKursNBU());
         dollar.setKursNBU(15);
         dollar.setKursNBU(10);
-        System.out.println(dollar.getKursNBU());
+        logger.info(dollar.getKursNBU());
 
         Bitcoin bitcoin = new Bitcoin(1000,200);
         System.out.println(bitcoin.getKursNBU());

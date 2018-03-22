@@ -1,6 +1,6 @@
 package libs;
 
-public class Bitcoin extends Currency implements FreeConver {
+public class Bitcoin extends Currency{
     public Bitcoin(double kursNBU, double marga) {
         super(kursNBU, marga);
     }
@@ -22,8 +22,5 @@ public class Bitcoin extends Currency implements FreeConver {
         return "Bitcoin";
     }
 
-    @Override
-    public boolean isFreeConver() {
-        return false;
     }
-}
+
