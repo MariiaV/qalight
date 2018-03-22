@@ -1,8 +1,11 @@
 package libs;
 
+import org.apache.log4j.Logger;
+
 import java.util.List;
 
 public class WorkWithList {
+    Logger logger = Logger.getLogger(getClass());
 
     public void addListToList(List<List<String>> ourList, List<String> value) {
 
@@ -22,6 +25,6 @@ public class WorkWithList {
             //System.out.println("element" + i + ourList.get(i));
             //   ourList.get(i).forEach(v -> System.out.println(v));
             List<String> listOfStrings = ourList.get(i);
-            listOfStrings.forEach(v -> System.out.println(v));
+            listOfStrings.forEach(v -> logger.info(v));
         }
 }}

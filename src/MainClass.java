@@ -75,17 +75,17 @@ public class MainClass {
         logger.info(dollar.getKursNBU());
 
         Bitcoin bitcoin = new Bitcoin(1000,200);
-        System.out.println(bitcoin.getKursNBU());
+        logger.info(bitcoin.getKursNBU());
         bitcoin.convertCurrencyToGrn(20);
 
         UZdollar uZdollar = new UZdollar(40,1.8);
-        System.out.println(uZdollar.getKursNBU());
+        logger.info(uZdollar.getKursNBU());
         uZdollar.convertGrnToCurrency(10000);
 
         dollar.convertGrnToCurrency(1000);
         dollar.convertCurrencyToGrn(100);
 
-        System.out.println("-- end --");
+        logger.info("-- end --");
 
 
     }

@@ -3,7 +3,7 @@ package libs;
 import org.apache.log4j.Logger;
 
 abstract public class Currency {
-    Logger loger = Logger.getLogger(getClass());
+    Logger logger = Logger.getLogger(getClass());
 
     private double kursNBU;
 
@@ -43,13 +43,13 @@ abstract public class Currency {
 
     public double convertGrnToCurrency(int numberOfGrn) {
         double tempResult = numberOfGrn / getKursForBuy();
-        System.out.println("For" + numberOfGrn + "grn you get" + tempResult + " " + getName());
+        logger.info("For" + numberOfGrn + "grn you get" + tempResult + " " + getName());
         return tempResult;
     }
 
     public double convertCurrencyToGrn(int numberOfCurrency) {
         double tempResult = numberOfCurrency * getkursForSell();
-        System.out.println("You get" + tempResult + "grn for" + numberOfCurrency + " " + getName());
+        logger.info("You get" + tempResult + "grn for" + numberOfCurrency + " " + getName());
         return tempResult;
     }
 
